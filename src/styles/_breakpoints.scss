@@ -1,0 +1,50 @@
+@mixin media-up($point) {
+  $phone: "(min-width: 567px)";
+  $tablet: "(min-width: 768px)";
+  $desktop: "(min-width: 992px)";
+  $widescreen: "(min-width:1200px)";
+
+  @if $point == sm {
+    @media #{$phone} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$tablet} {
+      @content;
+    }
+  } @else if $point == lg {
+    @media #{$desktop} {
+      @content;
+    }
+  } @else if $point == xl {
+    @media #{$widescreen} {
+      @content;
+    }
+  }
+}
+
+@mixin media-down($point) {
+  $phone: "(max-width:567px)";
+  $tablet: "(max-width:768px)";
+  $desktop: "(max-width:992px)";
+  $widescreen: "(max-width:1200px)";
+
+  @if $point == sm {
+    @media #{$phone} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$tablet} {
+      @content;
+    }
+  } @else if $point == lg {
+    @media #{$desktop} {
+      @content;
+    }
+  } @else if $point == xl {
+    @media #{$widescreen} {
+      @content;
+    }
+  }
+}
+

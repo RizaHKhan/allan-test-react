@@ -1,0 +1,14 @@
+.user {
+  display: flex;
+
+  &__link {
+    @extend %button;
+    @extend %button-normal;
+    text-decoration: none;
+  }
+
+  .active-link {
+    @extend %button-active;
+  }
+}
+
